@@ -6952,6 +6952,13 @@ label.panel-block {
     position: relative;
     overflow: hidden;
     border-radius: 50%;
+} 
+.image-cropper.is-mobile {
+    width: 70px;
+    height: 70px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
 }
 
 img {
