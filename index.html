@@ -12,14 +12,24 @@
 	      	<div class="hero-body column has-text-left" style="">
 	        	<div class="container">
 	          		<div class="columns">
-	          			<div class="column" style="margin-left: 100px;">
+	          			<div class="column is-hidden-mobile" style="margin-left: 100px;">
 			      			<div class="image-cropper">
 			      				<img src="assets/display-picture.jpg"/>
 			      			</div>
 			    		</div>
-	            		<div class="column is-8-desktop" style="margin-top: 20px; margin-right: 55px;">
+			    		<div class="column is-hidden-tablet">
+			      			<div class="image-cropper is-mobile">
+			      				<img src="assets/display-picture.jpg"/>
+			      			</div>
+			    		</div>
+	            		<div class="column is-8-desktop is-hidden-mobile" style="margin-top: 20px; margin-right: 55px;">
 	              			<h1 class="title is-2 is-spaced">Lovlin Thakkar</h1>
 	              			<h2 class="subtitle is-4">Hi! I am a determined wise-ass <strong>software developer.</strong><br>
+	                  		I like to <strong>deep-dive</strong> and solve <strong>real world</strong> problems.</h2>
+	            		</div>
+	            		<div class="column is-mobile is-hidden-tablet" style="margin-top: 20px; margin-right: 55px;">
+	              			<h1 class="title is-4 is-spaced">Lovlin Thakkar</h1>
+	              			<h2 class="subtitle is-6">Hi! I am a determined wise-ass <strong>software developer.</strong><br>
 	                  		I like to <strong>deep-dive</strong> and solve <strong>real world</strong> problems.</h2>
 	            		</div>
 	          		</div>
@@ -56,10 +66,10 @@
     	</section>
     	<section class="section">
       		<div class="container">
-        		<div class="columns">
-          			<div class="column is-8-desktop is-offset-2-desktop">
-            			<div class="content" id="1" style="display: block; width: 700px; margin-left: 10px; text-align: center;">
-            				<div class="buttons" style="display: inline-block; width: 500px; margin-left: 20px; text-align: justify-all;">
+        		<div class="columns is-mobile">
+          			<div class="column is-8-desktop is-offset-2-desktop is-mobile">
+            			<div class="content is-mobile is-desktop" id="1" style="display: block; text-align: center;">
+            				<div class="buttons" style="display: inline-block; text-align: justify-all;">
 								<button class="button" style="background-color: hsl(0, 0%, 92%); border-style: none;">Java</button>
 								<button class="button" style="background-color: hsl(0, 0%, 92%); border-style: none;">Python</button>
 								<button class="button" style="background-color: hsl(0, 0%, 92%); border-style: none;">C</button>
@@ -73,7 +83,7 @@
 							 	<button class="button" style="background-color: hsl(0, 0%, 92%); border-style: none;">Listed Derivatives</button>
 							</div>
           				</div>
-              			<div class="content" id="2" style="width: 600px; margin-left: 90px;">
+              			<div class="content" id="2">
               				<div class="notification is-white-ter">
 							  <b>Analyst @ Goldman Sachs (06/19 - Present)</b>: 
 							  <ul>
@@ -104,23 +114,25 @@
 							</div>
 	          			</div>
 	          			<div class="content" id="3">
-        					<div class="tile is-ancestor" style="margin-left: 50px;">
+        					<div class="tile is-ancestor">
 							  	<div class="tile is-vertical is-12">
 							   		<div class="tile">
 							      		<div class="tile is-parent is-vertical">
 										    <article class="tile is-child notification" style="border-radius: 6px;">
-								        		<p class="title">Gaming Agent</p>
+								        		<p class="title" style="font-size: 20px;">Gaming Agent</p>
 												<p class="subtitle">
 											        <ul>
+											        	</br>
 											        	<li>Developed a gaming agent for the Android game Road Fighter in Python using AndroidViewClient.</li>
 														<li>The agent automatically opens the Android game and plays according to the trained Deep Q Network.</li>
 													</ul>
 												</p>
 							      			</article>
 							        		<article class="tile is-child notification" style="border-radius: 6px;">
-							          			<p class="title">Panther</p>
+							          			<p class="title" style="font-size: 20px;">Panther</p>
 												<p class="subtitle">
 							        				<ul>
+							        					</br>
 							        					<li>A secure data transmission Android app which uses Audio Steganography & Data Encryption.</li>
 							        				</ul>
 												</p>
@@ -128,18 +140,20 @@
 							      		</div>
 							      		<div class="tile is-parent is-vertical">
 							        		<article class="tile is-child notification" style="border-radius: 6px;">
-							          			<p class="title">Scrape Metal</p>
+							          			<p class="title" style="font-size: 20px;">Scrape Metal</p>
 							          			<p class="subtitle">
 										        	<ul>
+										        		</br>
 										        		<li>Developed a price tracker website using Node.js and MongoDB.</li>
 														<li>Works with 5 different E-commerce websites.</li>
 													</ul>
 												</p>
 							        		</article>
 							        		<article class="tile is-child notification" style="border-radius: 6px;">
-							          			<p class="title">PolyToss</p>
+							          			<p class="title" style="font-size: 20px;">PolyToss</p>
 							          			<p class="subtitle">
 										        	<ul>
+										        		</br>
 										        		<li>An n-ary toss machine.</li>
 										        		<li>My first Android app developed overnight for randomly assigning rooms among me & my flatmates.</li>
 													</ul>
@@ -149,9 +163,10 @@
 							    	</div>
 							    	<div class="tile is-parent">
 							      		<article class="tile is-child notification" style="border-radius: 6px;">
-									      	<p class="title">Trajectory Planning for Robotic Arm</p>
+									      	<p class="title" style="font-size: 20px;">Trajectory Planning for Robotic Arm</p>
 									        <p class="subtitle">
 									        	<ul>
+									        		</br>
 									        		<li>Funded by Board of Research and Nuclear Sciences; Guide: Dr. Swati Jain.</li>
 													<li>Created a simulation of the Robotic Arm in Blender & coded Actor-Critic Algorithm in Python for training it to reach a point in 3D space.</li>
 												</ul>
@@ -161,7 +176,7 @@
 							  </div>
 							</div>
             			</div>
-            			<div class="content" id="4" style="width: 600px; margin-left: 90px;">
+            			<div class="content is-mobile is-desktop" id="4">
               				<div class="notification is-white-ter">
 							  <b>B. Tech. from Nirma University</b>: 
 							  <ul>
@@ -201,7 +216,7 @@
 	        	</div>
 	      	</div>
 	    </footer>
-	    <script type="text/javascript" src="javascript/main.js"></script>
+	    <script type="text/javascript" src="lib/main.js"></script>
 	    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
   	</body>
 </html>
