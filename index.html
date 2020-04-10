@@ -206,11 +206,24 @@
 				<div class="content" id="5">
               				<div class="notification is-white-ter">
 						<form action="https://formspree.io/xlewwjel" method="POST">
-							<ul style="list-style: none">
-								<li><label>Your email<input type="text" name="_replyto"></label></li>
-								<li><label>Your message<textarea name="message"></textarea></label></li>
-								<li><button type="submit" class="button" style="background-color: hsl(0, 0%, 92%); border-style: none;">Send</button></li>
-							</ul>
+							<div class="field">
+							  <label class="label">Your Email</label>
+							  <div class="control has-icons-left has-icons-right">
+							    <input class="input" type="email" placeholder="elonmusk@tesla.com" name="_replyto">
+							    <span class="icon is-small is-left">
+							      <i class="fas fa-envelope"></i>
+							    </span>
+							  </div>
+							</div>
+							<div class="field">
+							  <label class="label">Your Message</label>
+							  <div class="control">
+							    <textarea class="textarea" placeholder="Up for a space battle?" name="message"></textarea>
+							  </div>
+							</div>
+							<div class="control">
+							    <button class="button is-link" type="submit">Send</button>
+							</div>
 						</form>
 					</div>
             			</div>
