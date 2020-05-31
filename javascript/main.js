@@ -23,6 +23,10 @@ function populateSkills() {
   $.getJSON('javascript/config.json', function(data) {
     $.each(data.skills, function(i, skill) {
       console.log(`Skill #${i}: ${skill}`);
+
+      var button = document.createElement("button");
+      button.innerHTML = skill;
+      document.getElementById("skillsDiv").appendChild(button);
     });
   });
 }
