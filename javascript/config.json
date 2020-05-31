@@ -1,3 +1,16 @@
 {
-    "skills" : ["FIX Protocol", "Java", "C"]
+    "skills" : [
+        "Java",
+        "Python",
+        "C",
+        "Machine Learning",
+        "Data Structures",
+        "Algorithms",
+        "Mathematics",
+        "Teaching",
+        "Neural Networks",
+        "Apache Kafka",
+        "FIX Protocol",
+        "Listed Derivatives"
+    ]
 }
