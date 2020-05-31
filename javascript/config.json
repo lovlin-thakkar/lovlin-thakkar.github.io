@@ -12,5 +12,34 @@
         "Apache Kafka",
         "FIX Protocol",
         "Listed Derivatives"
+    ],
+
+    "experiences" : [
+        {
+            "title" : "Analyst",
+            "company" : "Goldman Sachs",
+            "timeline" : "06/19 - Present",
+            "description" : [
+                "Working on Re-engineering of the Allocations Management Software."
+            ]
+        },
+        {
+            "title" : "Spring Intern",
+            "company" : "Goldman Sachs",
+            "timeline" : "01/19 - 04/19",
+            "description" : [
+                "Developed Automatic Position Open-Close feature for trade-order flow of an exchange.",
+                "Reduced Operation Team's daily workload by an hour and mitigated the financial risk associated with manual work."
+            ]
+        },
+        {
+            "title" : "Summer Intern",
+            "company" : "Goldman Sachs",
+            "timeline" : "06/18 - 07/18",
+            "description" : [
+                "Developed an Automated Regression Testing Framework for Listed Derivatives Exchange Connectivity Application.",
+                "Decreased total testing time for the module by more than 50%."
+            ]
+        }
     ]
 }
