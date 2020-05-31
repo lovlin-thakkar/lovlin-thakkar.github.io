@@ -17,7 +17,7 @@ function openTab(evt, tabName) {
 }
 
 
-window.onload = function populateSkills() {
+function populateSkills() {
   console.log("Populating skills!");
 
   $.getJSON('javascript/config.json', function(data) {
@@ -26,3 +26,5 @@ window.onload = function populateSkills() {
     });
   });
 }
+
+window.onload = populateSkills;
