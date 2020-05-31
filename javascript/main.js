@@ -57,7 +57,7 @@ function populateExperience() {
       var descriptionList = document.createElement("ul");
       for (let j = 0; j < experience.description.length; j++) {
         var bulletPoint = document.createElement("li");
-        bulletPoint.innerHTML = experience.descriptionList[j];
+        bulletPoint.innerHTML = experience.description[j];
         descriptionList.appendChild(bulletPoint);
       }
       division.appendChild(descriptionList);
