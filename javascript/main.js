@@ -26,6 +26,9 @@ function populateSkills() {
 
       var button = document.createElement("button");
       button.innerHTML = skill;
+      button.class="button";
+      button.style.background="hsl(0, 0%, 92%)";
+      button.style.border="none";
       document.getElementById("skillsDiv").appendChild(button);
     });
   });
