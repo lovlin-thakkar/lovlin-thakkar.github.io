@@ -1,14 +1,28 @@
 function openTab(evt, tabName) {
-  console.log("tab change!")
-  var i, x, tablinks;
-  x = document.getElementsByClassName("content");
-  for (i = 0; i < x.length; i++) {
-      x[i].style.display = "none";
+  console.log("Tab change!");
+  var i, tabContent, tabLinks;
+  
+  tabContent = document.getElementsByClassName("content");
+  for (i = 0; i < tabContent.length; i++) {
+      tabContent[i].style.display = "none";
   }
-  tablinks = document.getElementsByClassName("tab");
-  for (i = 0; i < x.length; i++) {
-      tablinks[i].className = tablinks[i].className.replace(" is-active", "");
+
+  tabLinks = document.getElementsByClassName("tab");
+  for (i = 0; i < tabContent.length; i++) {
+      tabLinks[i].className = tabLinks[i].className.replace(" is-active", "");
   }
+
   document.getElementById(tabName).style.display = "block";
   evt.currentTarget.className += " is-active";
+}
+
+
+window.onload = function populateSkills() {
+  console.log("Populating skills!");
+
+  $.getJSON('javascript/config.json', function(data) {
+    $.each(data.skills, function(i, skill) {
+      console.log(`Skill #${i}: ${skill}`);
+    });
+  });
 }
