@@ -16,45 +16,44 @@ function openTab(evt, tabName) {
 }
 
 
-function populateSkills() {
-  $.getJSON('javascript/config.json', function(data) {
-    $.each(data.skills, function(i, skill) {
-      var button = document.createElement("button");
-      button.appendChild(document.createTextNode(skill));
-      button.className = "button";
-      button.style.background = "hsl(0, 0%, 92%)";
-      button.style.border = "none";
-      document.getElementById("skillsDiv").appendChild(button);
-    });
+function populateSkills(data) {
+  $.each(data.skills, function(i, skill) {
+    var button = document.createElement("button");
+    button.appendChild(document.createTextNode(skill));
+    button.className = "button";
+    button.style.background = "hsl(0, 0%, 92%)";
+    button.style.border = "none";
+    document.getElementById("skillsDiv").appendChild(button);
   });
 }
 
-function populateExperience() {
-  $.getJSON('javascript/config.json', function(data) {
-    $.each(data.experiences, function(i, experience) {
-      var division = document.createElement("div");
-      division.className="notification is-white-ter";
 
-      var title = document.createElement("b");
-      var titleText = experience.title + " @ " + experience.company + " (" + experience.timeline + ")";
-      title.appendChild(document.createTextNode(titleText));
-      division.appendChild(title);
+function populateExperience(data) {
+  $.each(data.experiences, function(i, experience) {
+    var division = document.createElement("div");
+    division.className = "notification is-white-ter";
 
-      var descriptionList = document.createElement("ul");
-      for (let j = 0; j < experience.description.length; j++) {
-        var bulletPoint = document.createElement("li");
-        bulletPoint.appendChild(document.createTextNode(experience.description[j]));
-        descriptionList.appendChild(bulletPoint);
-      }
-      division.appendChild(descriptionList);
+    var title = document.createElement("b");
+    var titleText = experience.title + " @ " + experience.company + " (" + experience.timeline + ")";
+    title.appendChild(document.createTextNode(titleText));
+    division.appendChild(title);
 
-      document.getElementById("2").appendChild(division);
-    });
+    var descriptionList = document.createElement("ul");
+    for (let j = 0; j < experience.description.length; j++) {
+      var bulletPoint = document.createElement("li");
+      bulletPoint.appendChild(document.createTextNode(experience.description[j]));
+      descriptionList.appendChild(bulletPoint);
+    }
+    division.appendChild(descriptionList);
+
+    document.getElementById("2").appendChild(division);
   });
 }
 
 
 function onLoad() {
-  populateSkills();
-  populateExperience();
+  $.getJSON("javascript/config.json", function(data) {
+    populateExperience(data);
+    populateSkills(data);
+  });
 }
