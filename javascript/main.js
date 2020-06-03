@@ -1,5 +1,4 @@
 function openTab(evt, tabName) {
-  console.log("Tab change!");
   var i, tabContent, tabLinks;
   
   tabContent = document.getElementsByClassName("content");
@@ -17,19 +16,9 @@ function openTab(evt, tabName) {
 }
 
 
-function onLoad() {
-  populateSkills();
-  populateExperience();
-}
-
-
 function populateSkills() {
-  console.log("Populating skills!");
-
   $.getJSON('javascript/config.json', function(data) {
     $.each(data.skills, function(i, skill) {
-      console.log(`Skill #${i}: ${skill}`);
-
       var button = document.createElement("button");
       button.innerHTML = skill;
       button.className = "button";
@@ -41,12 +30,8 @@ function populateSkills() {
 }
 
 function populateExperience() {
-  console.log("Populating experience!");
-
   $.getJSON('javascript/config.json', function(data) {
     $.each(data.experiences, function(i, experience) {
-      console.log(`Experience #${i}: ${experience}`);
-
       var division = document.createElement("div");
       division.className="notification is-white-ter";
 
@@ -65,4 +50,10 @@ function populateExperience() {
       document.getElementById("2").appendChild(division);
     });
   });
+}
+
+
+function onLoad() {
+  populateSkills();
+  populateExperience();
 }
