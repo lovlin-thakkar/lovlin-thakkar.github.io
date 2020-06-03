@@ -20,7 +20,7 @@ function populateSkills() {
   $.getJSON('javascript/config.json', function(data) {
     $.each(data.skills, function(i, skill) {
       var button = document.createElement("button");
-      button.innerHTML = skill;
+      button.appendChild(document.createTextNode(skill));
       button.className = "button";
       button.style.background = "hsl(0, 0%, 92%)";
       button.style.border = "none";
@@ -36,13 +36,14 @@ function populateExperience() {
       division.className="notification is-white-ter";
 
       var title = document.createElement("b");
-      title.innerHTML = experience.title + " @ " + experience.company + " (" + experience.timeline + ")";
+      var titleText = experience.title + " @ " + experience.company + " (" + experience.timeline + ")";
+      title.appendChild(document.createTextNode(titleText));
       division.appendChild(title);
 
       var descriptionList = document.createElement("ul");
       for (let j = 0; j < experience.description.length; j++) {
         var bulletPoint = document.createElement("li");
-        bulletPoint.innerHTML = experience.description[j];
+        bulletPoint.appendChild(document.createTextNode(experience.description[j]));
         descriptionList.appendChild(bulletPoint);
       }
       division.appendChild(descriptionList);
