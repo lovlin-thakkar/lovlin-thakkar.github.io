@@ -52,7 +52,7 @@ function populateExperience(data) {
 
 function onLoad() {
   $.getJSON("javascript/config.json", function(data) {
-    populateSkills();
-    populateExperience();
+    populateSkills(data);
+    populateExperience(data);
   });
 }
