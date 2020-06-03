@@ -1,0 +1,2 @@
+# lovlin-thakkar.github.io
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/1cd00e479f354bf0a32bfef981f16517)](https://app.codacy.com/manual/lovlinthakkar99/lovlin-thakkar.github.io?utm_source=github.com&utm_medium=referral&utm_content=lovlin-thakkar/lovlin-thakkar.github.io&utm_campaign=Badge_Grade_Dashboard)

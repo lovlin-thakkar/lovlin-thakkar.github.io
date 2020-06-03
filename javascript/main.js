@@ -15,7 +15,6 @@ function openTab(evt, tabName) {
   evt.currentTarget.className += " is-active";
 }
 
-
 function populateSkills(data) {
   $.each(data.skills, function(i, skill) {
     var button = document.createElement("button");
@@ -53,7 +52,7 @@ function populateExperience(data) {
 
 function onLoad() {
   $.getJSON("javascript/config.json", function(data) {
-    populateExperience(data);
-    populateSkills(data);
+    populateSkills();
+    populateExperience();
   });
 }
