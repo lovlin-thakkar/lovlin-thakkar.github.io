@@ -2,13 +2,13 @@ function openTab(evt, tabName) {
   var tabsContent, tabLinks;
   
   tabsContent = document.getElementsByClassName("content");
-  tabsContent.forEach(function(tabContent) {
+  [].forEach.call(tabsContent, function(tabContent) {
     tabContent.style.display = "none";
     return tabContent;
   });
 
   tabLinks = document.getElementsByClassName("tab");
-  tabLinks.forEach(function(tabLink) {
+  [].forEach.call(tabLinks, function(tabLink) {
     tabLink.className = tabLink.className.replace(" is-active", "");
     return tabLink;
   });
