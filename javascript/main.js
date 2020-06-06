@@ -1,19 +1,22 @@
 function openTab(evt, tabName) {
-  var i, tabContent, tabLinks;
+  var tabsContent, tabLinks;
   
-  tabContent = document.getElementsByClassName("content");
-  for (i = 0; i < tabContent.length; i++) {
-      tabContent[i].style.display = "none";
-  }
+  tabsContent = document.getElementsByClassName("content");
+  tabsContent.array.forEach(function(tabContent) {
+    tabContent.style.display = "none";
+    return tabContent;
+  });
 
   tabLinks = document.getElementsByClassName("tab");
-  for (i = 0; i < tabContent.length; i++) {
-      tabLinks[i].className = tabLinks[i].className.replace(" is-active", "");
-  }
+  tabLinks.forEach(function(tabLink) {
+    tabLink.className = tabLink.className.replace(" is-active", "");
+    return tabLink;
+  });
 
   document.getElementById(tabName).style.display = "block";
   evt.currentTarget.className += " is-active";
 }
+
 
 function populateSkills(data) {
   $.each(data.skills, function(i, skill) {
@@ -38,9 +41,9 @@ function populateExperience(data) {
     division.appendChild(title);
 
     var descriptionList = document.createElement("ul");
-    for (let j = 0; j < experience.description.length; j++) {
+    for (const description of experience.description) {
       var bulletPoint = document.createElement("li");
-      bulletPoint.appendChild(document.createTextNode(experience.description[j]));
+      bulletPoint.appendChild(document.createTextNode(description));
       descriptionList.appendChild(bulletPoint);
     }
     division.appendChild(descriptionList);
