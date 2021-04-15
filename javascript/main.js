@@ -52,10 +52,19 @@ function populateExperience(data) {
   });
 }
 
+function prepareTwitterMentionButton() {
+  twttr.widgets.createMentionButton(
+    "lovlin_t",
+    document.getElementById("container"), {
+      size: "large"
+    }
+  );
+}
 
 function onLoad() {
   $.getJSON("javascript/config.json", function(data) {
     populateSkills(data);
     populateExperience(data);
+    prepareTwitterMentionButton();
   });
 }
