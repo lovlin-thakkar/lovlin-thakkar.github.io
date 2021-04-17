@@ -65,6 +65,6 @@ function onLoad() {
   $.getJSON("javascript/config.json", function(data) {
     populateSkills(data);
     populateExperience(data);
-    prepareTwitterMentionButton();
   });
+  prepareTwitterMentionButton();
 }
