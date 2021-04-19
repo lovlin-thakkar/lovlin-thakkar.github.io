@@ -55,10 +55,13 @@ function populateExperience(data) {
 function prepareTwitterMentionButton() {
   twttr.widgets.createMentionButton(
     "lovlin_t",
-    document.getElementById("container"), {
+    document.getElementById("container_twitter_mention"),
+    {
       size: "large"
     }
-  );
+  ).then(function(el) {
+    console.log('Tweet button added.' + el);
+  });
 }
 
 function onLoad() {
