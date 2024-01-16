@@ -1,8 +1,11 @@
 {
     "skills" : [
+        "GoLang",
+        "Django",
         "Java",
         "Python",
         "C",
+        "Postgres",
         "Kong API Gateway",
         "Machine Learning",
         "Data Structures",
@@ -17,9 +20,30 @@
 
     "experiences" : [
         {
+            "title" : "SDE-2",
+            "company" : "Swiggy",
+            "timeline" : "05/22 - Present",
+            "description" : [
+                "Multiple large-impact features for SuprDaily & InsanelyGood apps.", 
+                "Real-time demand shaping v2 system for SuprDaily store front", 
+                "Pivot of SuprDaily app to InsanelyGood app; wrote a new service in Go",
+                "Shipped code to manage daily delivery capacity at Slot X Drop Point level, rather than Hub level, enabling business to scale up in-hand slot deliveries. Completed in just 1 week",
+                "Onboarding InsanelyGood to Swiggy app, managed Last Mile Delivery & Timeline / Tracking integrations",
+                "Working in Instamart Supply Chain Engineering Team"
+            ]
+        },
+        {
+            "title" : "Associate",
+            "company" : "Goldman Sachs",
+            "timeline" : "12/21 - 05/22",
+            "description" : [
+                "Built the Kong API Gateway for the new Advisor Portal external website in the Asset Management Digital Tech team (https://www.gsam.com/advisorportal/login)"
+            ]
+        },
+        {
             "title" : "Analyst",
             "company" : "Goldman Sachs",
-            "timeline" : "06/19 - Present",
+            "timeline" : "06/19 - 12/21",
             "description" : [
                 "Working on Re-engineering of the Allocations Management Software."
             ]
