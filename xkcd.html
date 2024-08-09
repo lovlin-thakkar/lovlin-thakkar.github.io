@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XKCD Comic of the Day</title>
+</head>
+<body>
+    <h1>XKCD Comic of the Day</h1>
+    <div id="comic-container">
+        <img id="comic-image" src="" alt="XKCD Comic">
+    </div>
+    <script>
+        async function getXkcdComic() {
+            try {
+                // Fetch the latest XKCD comic
+                const response = await fetch('https://xkcd.com/info.0.json');
+                const latestComic = await response.json();
+
+                // Get the date when the comic was created
+                const comicDate = new Date(latestComic.year, latestComic.month - 1, latestComic.day);
+                const yesterday = new Date();
+                yesterday.setDate(yesterday.getDate() - 1);
+
+                let comicUrl;
+
+                // Check if the comic was created on or before yesterday
+                if (comicDate <= yesterday) {
+                    // If the comic is from yesterday or earlier, show a random comic
+                    comicUrl = 'https://c.xkcd.com/random/comic/';
+                    window.location.href = comicUrl;  // Redirect to a random comic
+                } else {
+                    // If the comic is from today, show the latest comic
+                    comicUrl = latestComic.img;
+                    document.getElementById('comic-image').src = comicUrl;
+                }
+            } catch (error) {
+                console.error('Error fetching the XKCD comic:', error);
+            }
+        }
+
+        // Call the function to fetch and display the comic
+        getXkcdComic();
+    </script>
+</body>
+</html>
