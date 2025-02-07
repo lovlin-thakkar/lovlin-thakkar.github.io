@@ -20,9 +20,17 @@
 
     "experiences" : [
         {
+            "title" : "Sr. Software Engineer",
+            "company" : "<a href='www.heymarvin.com'>Marvin</a>",
+            "timeline" : "11/24 - Present",
+            "description" : [
+                "Working on various product features, AI integrations & more"
+            ]
+        },
+        {
             "title" : "SDE-2",
             "company" : "Swiggy",
-            "timeline" : "05/22 - Present",
+            "timeline" : "05/22 - 11/24",
             "description" : [
                 "Multiple large-impact features for SuprDaily & InsanelyGood apps.", 
                 "Real-time demand shaping v2 system for SuprDaily store front", 
