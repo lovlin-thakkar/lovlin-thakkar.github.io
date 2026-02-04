@@ -7052,6 +7052,8 @@ img {
   line-height: 1.5;
   color: inherit;
   margin-top: 0.75rem;
+  list-style: disc;
+  padding-left: 1.25rem;
 }
 .intro-text.is-mobile {
   font-size: 0.85rem;
