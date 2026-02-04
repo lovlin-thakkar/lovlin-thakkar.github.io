@@ -1,77 +1,63 @@
 {
     "skills" : [
-        "GoLang",
-        "Django",
+        "Django / Python",
+        "Golang",
         "Java",
-        "Python",
-        "C",
         "Postgres",
-        "Kong API Gateway",
-        "Machine Learning",
-        "Data Structures",
-        "Algorithms",
-        "Mathematics",
-        "Teaching",
-        "Neural Networks",
-        "Apache Kafka",
-        "FIX Protocol",
-        "Listed Derivatives"
+        "Kafka",
+        "AWS",
+        "API Gateway",
+        "Unix",
+        "Git",
+        "Distributed Systems",
+        "Backend APIs",
+        "OpenAI",
+        "FIX Protocol"
     ],
 
     "experiences" : [
         {
-            "title" : "Sr. Software Engineer",
-            "company" : "Marvin",
-            "timeline" : "11/24 - Present",
+            "title" : "Senior Software Engineer",
+            "company" : "HeyMarvin AI (Equafin Corp)",
+            "timeline" : "Nov 2024 - Jan 2026",
             "description" : [
-                "Working on various product features, AI integrations & more"
+                "Shipped & owned 30+ production features across onboarding, auth, feature flags, data retention, PII pipelines & AI-assisted workflows.",
+                "Built a scalable feature-flag & plan-control system enabling tier-based access.",
+                "Designed & maintained PII processing and data archival systems for surveys, audio, video & other files, including anonymization and audit metadata.",
+                "Resolved high-risk production issues including auth/SSO bugs, SCIM edge cases, and zero-downtime hot-fixes.",
+                "Implemented end-to-end onboarding revamp & project lifecycle management including access requests and ownership transfer."
             ]
         },
         {
-            "title" : "SDE-2",
-            "company" : "Swiggy",
-            "timeline" : "05/22 - 11/24",
+            "title" : "Software Engineer 2",
+            "company" : "Swiggy (Instamart / Insanely Good / SuprDaily)",
+            "timeline" : "May 2022 - Oct 2024",
             "description" : [
-                "Multiple large-impact features for SuprDaily & InsanelyGood apps.", 
-                "Real-time demand shaping v2 system for SuprDaily store front", 
-                "Pivot of SuprDaily app to InsanelyGood app; wrote a new service in Go",
-                "Shipped code to manage daily delivery capacity at Slot X Drop Point level, rather than Hub level, enabling business to scale up in-hand slot deliveries. Completed in just 1 week",
-                "Onboarding InsanelyGood to Swiggy app, managed Last Mile Delivery & Timeline / Tracking integrations",
-                "Working in Instamart Supply Chain Engineering Team"
+                "Delivered multiple high-impact backend projects across SuprDaily & Insanely Good platforms.",
+                "Built Realtime Demand Shaping v2 for Supr Daily storefront.",
+                "Led backend changes for SuprDaily to InsanelyGood pivot, including presentation-layer services.",
+                "Re-architected delivery capacity management from Hub-level to Slot/Drop-point granularity, enabling rapid scale-up delivered in 1 week.",
+                "Integrated end-to-end delivery and tracking systems during migration into the Swiggy app.",
+                "Tech Stack: Django (Python), Go, Java, AWS, Postgres, API Gateway."
             ]
         },
         {
-            "title" : "Associate",
+            "title" : "Associate (SE 2) & Analyst (SE 1)",
             "company" : "Goldman Sachs",
-            "timeline" : "12/21 - 05/22",
+            "timeline" : "Jun 2019 - May 2022",
             "description" : [
-                "Built the Kong API Gateway for the new Advisor Portal external website in the Asset Management Digital Tech team (https://www.gsam.com/advisorportal/login)"
+                "Built Kong API Gateway for external Advisor Portal (Asset Mgmt Tech).",
+                "Re-engineered & optimized Trade Allocation workflows, scaling processing capacity by ~10x.",
+                "Built high-throughput processors using Java, Kafka, DB2, QuickFIX/J."
             ]
         },
         {
-            "title" : "Analyst",
+            "title" : "Spring & Summer Intern",
             "company" : "Goldman Sachs",
-            "timeline" : "06/19 - 12/21",
+            "timeline" : "Jun 2018 - Apr 2019",
             "description" : [
-                "Working on Re-engineering of the Allocations Management Software."
-            ]
-        },
-        {
-            "title" : "Spring Intern",
-            "company" : "Goldman Sachs",
-            "timeline" : "01/19 - 04/19",
-            "description" : [
-                "Developed Automatic Position Open-Close feature for trade-order flow of an exchange.",
-                "Reduced Operation Team's daily workload by an hour and mitigated the financial risk associated with manual work."
-            ]
-        },
-        {
-            "title" : "Summer Intern",
-            "company" : "Goldman Sachs",
-            "timeline" : "06/18 - 07/18",
-            "description" : [
-                "Developed an Automated Regression Testing Framework for Listed Derivatives Exchange Connectivity Application.",
-                "Decreased total testing time for the module by more than 50%."
+                "Built Trade/Order Position Open-Close feature. Reduced Ops Team's daily work by 1 hour & mitigated financial risk (Tech: Java, Sybase).",
+                "Built an Automated Regression Tester for Derivatives Exchange Connectivity. Reduced release testing time from 8h to ~2h."
             ]
         }
     ]
