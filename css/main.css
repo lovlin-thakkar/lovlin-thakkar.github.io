@@ -6973,3 +6973,56 @@ img {
 .content {
   display: none;
 }
+
+/* Tab fade-in animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.content[style*="display: block"] {
+  animation: fadeIn 0.35s ease-out;
+}
+
+/* Skill button hover effect */
+.buttons .button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.buttons .button {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Spacing fix for project tiles */
+.tile.is-child .title + .subtitle {
+  margin-top: -0.3rem;
+}
+
+/* Experience card styling */
+.exp-title {
+  font-weight: 700;
+  font-size: 1.05rem;
+}
+
+.exp-company {
+  color: #666;
+  font-size: 0.95rem;
+}
+
+.exp-timeline {
+  float: right;
+  color: #888;
+  font-size: 0.9rem;
+}
+
+.exp-header {
+  margin-bottom: 0.5rem;
+}
+
+.exp-header::after {
+  content: "";
+  display: table;
+  clear: both;
+}

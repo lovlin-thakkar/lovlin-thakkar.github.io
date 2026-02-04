@@ -1,20 +1,14 @@
 function openTab(evt, tabName) {
-  var tabsContent, tabLinks;
-  
-  tabsContent = document.getElementsByClassName("content");
-  [].forEach.call(tabsContent, function(tabContent) {
+  document.querySelectorAll(".content").forEach(function(tabContent) {
     tabContent.style.display = "none";
-    return tabContent;
   });
 
-  tabLinks = document.getElementsByClassName("tab");
-  [].forEach.call(tabLinks, function(tabLink) {
-    tabLink.className = tabLink.className.replace(" is-active", "");
-    return tabLink;
+  document.querySelectorAll(".tab").forEach(function(tabLink) {
+    tabLink.classList.remove("is-active");
   });
 
   document.getElementById(tabName).style.display = "block";
-  evt.currentTarget.className += " is-active";
+  evt.currentTarget.classList.add("is-active");
 }
 
 
@@ -35,10 +29,25 @@ function populateExperience(data) {
     var division = document.createElement("div");
     division.className = "notification is-white-ter";
 
-    var title = document.createElement("b");
-    var titleText = experience.title + " @ " + experience.company + " (" + experience.timeline + ")";
-    title.appendChild(document.createTextNode(titleText));
-    division.appendChild(title);
+    var header = document.createElement("div");
+    header.className = "exp-header";
+
+    var title = document.createElement("span");
+    title.className = "exp-title";
+    title.textContent = experience.title;
+    header.appendChild(title);
+
+    var timeline = document.createElement("span");
+    timeline.className = "exp-timeline";
+    timeline.textContent = experience.timeline;
+    header.appendChild(timeline);
+
+    var company = document.createElement("div");
+    company.className = "exp-company";
+    company.textContent = experience.company;
+    header.appendChild(company);
+
+    division.appendChild(header);
 
     var descriptionList = document.createElement("ul");
     for (const description of experience.description) {
@@ -56,5 +65,10 @@ function onLoad() {
   $.getJSON("javascript/config.json", function(data) {
     populateSkills(data);
     populateExperience(data);
+  }).fail(function() {
+    var errorDiv = document.createElement("div");
+    errorDiv.className = "notification is-danger";
+    errorDiv.textContent = "Failed to load configuration. Please try refreshing the page.";
+    document.querySelector(".section .container").prepend(errorDiv);
   });
 }
