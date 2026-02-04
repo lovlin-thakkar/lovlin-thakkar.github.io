@@ -6948,7 +6948,7 @@ label.panel-block {
 
 .footer {
   background-color: #fafafa;
-  padding: 3rem 1.5rem 6rem; }
+  padding: 3rem 1.5rem; }
 
 .image-cropper {
     width: 200px;
@@ -6982,6 +6982,15 @@ img {
 
 .content[style*="display: block"] {
   animation: fadeIn 0.35s ease-out;
+}
+
+/* Skills grid — 3-4 per row */
+#skillsDiv {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 500px;
+  margin: 0 auto;
 }
 
 /* Skill button hover effect */
@@ -7025,4 +7034,43 @@ img {
   content: "";
   display: table;
   clear: both;
+}
+
+/* Hero intro text — visually separate from the title/subtitle pair */
+.hero-body .subtitle.is-5 {
+  font-size: 1.44rem;
+}
+.hero-body .subtitle.is-6 {
+  font-size: 1.15rem;
+}
+.hero-body .subtitle {
+  margin-bottom: 0;
+  font-weight: 500;
+}
+.intro-text {
+  font-size: 1.05rem;
+  line-height: 1.5;
+  color: inherit;
+  margin-top: 0.75rem;
+}
+.intro-text.is-mobile {
+  font-size: 0.85rem;
+}
+
+/* Reduce gap between tabs and content */
+.section {
+  padding-top: 1.5rem;
+}
+
+/* Remove extra right padding on cards (Bulma default reserves space for a delete button) */
+.notification {
+  padding-right: 1.5rem;
+}
+
+/* Remove double margin from <p> wrapping <ul> inside project tiles */
+.tile.is-child .subtitle:has(ul) {
+  margin-bottom: 0;
+}
+.tile.is-child .subtitle ul {
+  margin-top: 0;
 }
