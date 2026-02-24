@@ -3,6 +3,7 @@
         "Django / Python",
         "Golang",
         "Java",
+        "Backend APIs",
         "Postgres",
         "Kafka",
         "AWS",
@@ -10,9 +11,8 @@
         "Unix",
         "Git",
         "Distributed Systems",
-        "Backend APIs",
-        "OpenAI",
-        "FIX Protocol"
+        "LLM Integration",
+        "Node.js"
     ],
 
     "experiences" : [
@@ -21,11 +21,11 @@
             "company" : "HeyMarvin AI (Equafin Corp)",
             "timeline" : "Nov 2024 - Jan 2026",
             "description" : [
-                "Shipped & owned 30+ production features across onboarding, auth, feature flags, data retention, PII pipelines & AI-assisted workflows.",
-                "Built a scalable feature-flag & plan-control system enabling tier-based access.",
-                "Designed & maintained PII processing and data archival systems for surveys, audio, video & other files, including anonymization and audit metadata.",
-                "Resolved high-risk production issues including auth/SSO bugs, SCIM edge cases, and zero-downtime hot-fixes.",
-                "Implemented end-to-end onboarding revamp & project lifecycle management including access requests and ownership transfer."
+                "Architected a data archival system unblocking sales for 10+ enterprise customers and ensuring data sovereignty compliance across 30+ organizations.",
+                "Shipped a specialized Survey PII processing engine that secured 5 high-value enterprise contracts.",
+                "Developed a scalable feature-flag and plan-control system enabling granular tier-based access and self-serve monetization.",
+                "Championed technical excellence via design reviews and mentored junior engineers, reducing onboarding time by 30% and standardizing code quality.",
+                "Collaborated with Product Managers to translate complex requirements into technical roadmaps for onboarding & growth use cases."
             ]
         },
         {
@@ -33,12 +33,10 @@
             "company" : "Swiggy (Instamart / Insanely Good / SuprDaily)",
             "timeline" : "May 2022 - Oct 2024",
             "description" : [
-                "Delivered multiple high-impact backend projects across SuprDaily & Insanely Good platforms.",
-                "Built Realtime Demand Shaping v2 for Supr Daily storefront.",
-                "Led backend changes for SuprDaily to InsanelyGood pivot, including presentation-layer services.",
-                "Re-architected delivery capacity management from Hub-level to Slot/Drop-point granularity, enabling rapid scale-up delivered in 1 week.",
-                "Integrated end-to-end delivery and tracking systems during migration into the Swiggy app.",
-                "Tech Stack: Django (Python), Go, Java, AWS, Postgres, API Gateway."
+                "Re-architected capacity management to Slot-level granularity in 7 days, reducing expansion lead time from 4 weeks to 1 week for a major marketing launch.",
+                "Delivered Real-time Demand Shaping v2, reducing peak-traffic order failures by ~1% (absolute) and recovering ~$1k+ GMV per day.",
+                "Led backend engineering for the InsanelyGood pivot, designing high-availability presentation-layer services to support the transition.",
+                "Orchestrated end-to-end integration of delivery tracking systems during a high-stakes migration into the primary Swiggy ecosystem."
             ]
         },
         {
@@ -46,9 +44,9 @@
             "company" : "Goldman Sachs",
             "timeline" : "Jun 2019 - May 2022",
             "description" : [
-                "Built Kong API Gateway for external Advisor Portal (Asset Mgmt Tech).",
-                "Re-engineered & optimized Trade Allocation workflows, scaling processing capacity by ~10x.",
-                "Built high-throughput processors using Java, Kafka, DB2, QuickFIX/J."
+                "Re-engineered Trade Allocation workflows to scale processing capacity 10x while reducing infrastructure costs by 80%.",
+                "Deployed Kong API Gateway for the Advisor Portal, centralizing security and traffic management.",
+                "Optimized high-throughput Kafka processors to handle real-time trade data streams via the FIX Protocol."
             ]
         },
         {
@@ -56,8 +54,8 @@
             "company" : "Goldman Sachs",
             "timeline" : "Jun 2018 - Apr 2019",
             "description" : [
-                "Built Trade/Order Position Open-Close feature. Reduced Ops Team's daily work by 1 hour & mitigated financial risk (Tech: Java, Sybase).",
-                "Built an Automated Regression Tester for Derivatives Exchange Connectivity. Reduced release testing time from 8h to ~2h."
+                "Built a Trade Position Open-Close calculator, mitigating human errors that caused $1k+ in projected monthly losses.",
+                "Developed an Automated Regression Tester for Derivatives Exchange Connectivity, reducing release testing cycles from 8 hours to 2 hours."
             ]
         }
     ]
