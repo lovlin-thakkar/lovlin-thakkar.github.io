@@ -19,4 +19,4 @@ B.Tech Information Technology, Nirma University (GPA 8.18/10)
 - Email: lovlinthakkar99@gmail.com
 - LinkedIn: https://in.linkedin.com/in/lovlin-thakkar
 - GitHub: https://github.com/lovlin-thakkar
-- Portfolio: https://lovlin-thakkar.github.io/index_v2.html
+- Portfolio: https://lovlin-thakkar.github.io/

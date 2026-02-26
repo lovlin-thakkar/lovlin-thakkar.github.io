@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script type="text/javascript" src="javascript/main.js"></script>
+		<script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+
+		<script>
+			window.onload = onLoad;
+		</script>
+    	<meta charset="utf-8">
+    	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+    	<title>Lovlin Thakkar</title>
+    	<meta name="description" content="Lovlin Thakkar — Senior Software Engineer with 7 years of experience building high-scale systems across Fintech, Quick Commerce, and B2B SaaS. Expertise in distributed systems and GenAI workflows.">
+    	<meta name="theme-color" content="#000000">
+    	<link rel="canonical" href="https://lovlin-thakkar.github.io/">
+    	<meta property="og:title" content="Lovlin Thakkar — Senior Software Engineer">
+    	<meta property="og:description" content="Senior Software Engineer with 7 years of experience building high-scale systems across Fintech, Quick Commerce, and B2B SaaS. Expertise in distributed systems and GenAI workflows.">
+    	<meta property="og:type" content="website">
+    	<meta property="og:url" content="https://lovlin-thakkar.github.io/">
+    	<meta property="og:image" content="https://lovlin-thakkar.github.io/assets/dp.jpg">
+    	<link rel="stylesheet" href="css/main.css">
+    	<link rel="icon" href="favicon.ico">
+  	</head>
+	<body>
+    	<section class="hero is-small is-black">
+	      	<div class="hero-body column has-text-left">
+	        	<div class="container">
+	          		<div class="columns">
+	          			<div class="column is-hidden-mobile" style="margin-left: 100px;">
+			      			<div class="image-cropper">
+			      				<img src="assets/dp.jpg" alt="Lovlin Thakkar profile photo">
+			      			</div>
+			    		</div>
+			    		<div class="column is-hidden-tablet">
+			      			<div class="image-cropper is-mobile">
+			      				<img src="assets/dp.jpg" alt="Lovlin Thakkar profile photo">
+			      			</div>
+			    		</div>
+					<div class="column is-8-desktop is-hidden-mobile" style="margin-top: 20px; margin-right: 55px;">
+						<h1 class="title is-2">Lovlin Thakkar</h1>
+						<h2 class="subtitle is-5">Senior Software Engineer</h2>
+						<ul class="intro-text">
+							<li>7 years of experience building high-scale systems across <strong>Fintech</strong>, <strong>Quick Commerce</strong>, and <strong>B2B SaaS</strong></li>
+							<li>Expertise in architecting <strong>distributed systems</strong> and <strong>GenAI workflows</strong> driving enterprise compliance and operational efficiency</li>
+							<li>Previously at <strong>HeyMarvin AI</strong>, <strong>Swiggy</strong>, and <strong>Goldman Sachs</strong></li>
+						</ul>
+					</div>
+					<div class="column is-mobile is-hidden-tablet" style="margin-top: 20px;">
+						<h1 class="title is-4">Lovlin Thakkar</h1>
+						<h2 class="subtitle is-6">Senior Software Engineer</h2>
+						<ul class="intro-text is-mobile">
+							<li>7 years of experience building high-scale systems across <strong>Fintech</strong>, <strong>Quick Commerce</strong>, and <strong>B2B SaaS</strong></li>
+							<li>Expertise in architecting <strong>distributed systems</strong> and <strong>GenAI workflows</strong> driving enterprise compliance and operational efficiency</li>
+							<li>Previously at <strong>HeyMarvin AI</strong>, <strong>Swiggy</strong>, and <strong>Goldman Sachs</strong></li>
+						</ul>
+					</div>
+	          		</div>
+	        	</div>
+	      	</div>
+      		<div class="tabs is-centered is-boxed">
+		  		<ul>
+		    		<li class="tab is-active" onclick="openTab(event, '1')">
+						<a>
+							<span class="icon is-small"><i class="fas fa-keyboard" aria-hidden="true"></i></span>
+							<span>Skills</span>
+						</a>
+		    		</li>
+		    		<li class="tab" onclick="openTab(event, '2')">
+			      		<a>
+			        		<span class="icon is-small"><i class="fas fa-briefcase" aria-hidden="true"></i></span>
+			        		<span>Experience</span>
+			      		</a>
+		    		</li>
+		    		<li class="tab" onclick="openTab(event, '3')">
+			      		<a>
+			        		<span class="icon is-small"><i class="fas fa-wrench" aria-hidden="true"></i></span>
+			        		<span>Projects</span>
+			      		</a>
+		    		</li>
+				<!-- Testimonials tab hidden for now
+			<li class="tab" onclick="openTab(event, '6')">
+			      		<a>
+			        		<span class="icon is-small"><i class="fas fa-wrench" aria-hidden="true"></i></span>
+			        		<span>Testimonials</span>
+			      		</a>
+		    		</li>
+			-->
+		    		<li class="tab" onclick="openTab(event, '4')">
+		      			<a>
+		        			<span class="icon is-small"><i class="fas fa-university" aria-hidden="true"></i></span>
+		        			<span>Education</span>
+		      			</a>
+		    		</li>
+			  		</ul>
+	  		</div>
+    	</section>
+    	<section class="section">
+      		<div class="container">
+        		<div class="columns is-mobile">
+          			<div class="column is-8-desktop is-offset-2-desktop is-mobile">
+					<div class="content" id="1" style="display: block; text-align: center;">
+						<div class="buttons" id="skillsDiv"></div>
+						<div class="notification is-grey-dark" id="skill-desc" style="display: none; width: max-content;"></div>
+					</div>
+					<div class="content" id="2"></div>
+					<div class="content" id="3">
+						<div class="tile is-ancestor">
+							<div class="tile is-vertical is-12">
+								<div class="tile">
+									<div class="tile is-parent is-vertical">
+										<article class="tile is-child notification" style="border-radius: 6px;">
+											<p class="title" style="font-size: 20px;">Gaming AI Agent</p>
+											<p class="subtitle">
+												<ul>
+													<li>Deep Q-Network (DQN) in Python achieving human-level performance in simple mobile gaming.</li>
+												</ul>
+												</p>
+										</article>
+									</div>
+									<div class="tile is-parent is-vertical">
+										<article class="tile is-child notification" style="border-radius: 6px;">
+											<p class="title" style="font-size: 20px;">Price Tracker</p>
+											<p class="subtitle">
+												<ul>
+													<li>High-concurrency scraping web-app built with Node.js and MongoDB that works with 5+ e-commerce platforms.</li>
+												</ul>
+												</p>
+										</article>
+									</div>
+								</div>
+								<div class="tile is-parent">
+									<article class="tile is-child notification" style="border-radius: 6px;">
+										<p class="title" style="font-size: 20px;">Tokamak Trajectory Planning</p>
+										<p class="subtitle">
+											<ul>
+												<li>Robotic arm simulation using Actor-Critic RL for nuclear research.</li>
+											</ul>
+										</p>
+									</article>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="content" id="4">
+						<div class="notification is-white-ter">
+							<b>B. Tech. from Nirma University</b>: 
+							<ul>
+								<li>Information Technology</li>
+								<li>PPI: 8.18 / 10.0</li>
+								<li>
+									Courses:
+									<ul>
+										<li>Data Structures</li>
+										<li>Deep Learning</li>
+										<li>Design and Analysis of Algorithms</li>
+										<li>Machine Learning</li>
+										<li>Object Oriented Programming</li>
+										<li>Theory of Computation</li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="content" id="6">
+						<div class="tile is-ancestor">
+							<div class="tile is-vertical is-12">
+								<div class="tile">
+									<div class="tile is-parent is-vertical">
+										<article class="tile is-child notification" style="border-radius: 6px;">
+											<p class="title" style="font-size: 20px;">Loading...</p>
+											<p class="subtitle">
+												<ul>
+													<li>Loading...</li>
+													</ul>
+												</p>
+										</article>
+										<article class="tile is-child notification" style="border-radius: 6px;">
+											<p class="title" style="font-size: 20px;">Loading...</p>
+												<p class="subtitle">
+												<ul>
+													<li>Loading....</li>
+												</ul>
+												</p>
+										</article>
+									</div>
+									<div class="tile is-parent is-vertical">
+										<article class="tile is-child notification" style="border-radius: 6px;">
+											<p class="title" style="font-size: 20px;">Loading...</p>
+											<p class="subtitle">
+												<ul>
+													<li>Loading...</li>
+													</ul>
+												</p>
+										</article>
+										<article class="tile is-child notification" style="border-radius: 6px;">
+											<p class="title" style="font-size: 20px;">Loading...</p>
+											<p class="subtitle">
+												<ul>
+													<li>Loading...</li>
+													</ul>
+												</p>
+										</article>
+									</div>
+								</div>
+								<div class="tile is-parent">
+									<article class="tile is-child notification" style="border-radius: 6px;">
+										<p class="title" style="font-size: 20px;">Loading...</p>
+										<p class="subtitle">
+											<ul>
+												<li>Loading...</li>
+											</ul>
+										</p>
+									</article>
+								</div>
+							</div>
+						</div>
+					</div>
+          			</div>
+        		</div>
+      		</div>
+    	</section>
+
+	<footer class="footer has-text-centered">
+		<div class="container">
+			<div class="columns">
+				<div class="column is-8-desktop is-offset-2-desktop">
+					<p>
+						<a href='https://in.linkedin.com/in/lovlin-thakkar' style="vertical-align: middle;">
+							<img src="assets/LI-In-Bug.png" width="32" height="32" alt="LinkedIn">
+						</a>
+						<a href='https://github.com/lovlin-thakkar' style="vertical-align: middle;">
+							<img src="assets/GitHub-Mark-32px.png" width="29" height="29" alt="GitHub">
+						</a>
+						<a href='assets/resume.pdf' download="Lovlin Thakkar Resume.pdf" title="Download Resume" style="vertical-align: middle;">
+							<i class="fas fa-download" style="font-size: 28px; color: #333;" aria-hidden="true"></i>
+							<span class="sr-only">Download Resume</span>
+						</a><br>
+						<small>Created by Lovlin Thakkar.<br></small>
+					</p>
+					<p>
+						<small>Source code licensed <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. Content licensed <a href="https://www.gnu.org/licenses/gpl-3.0.en.html">GNU General Public License v3.0</a></small>
+					</p>
+					</div>
+			</div>
+		</div>
+	</footer>
+	</body>
+</html>
