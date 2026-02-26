@@ -1,0 +1,22 @@
+# Lovlin Thakkar — Senior Software Engineer
+
+## Summary
+Senior Software Engineer with 7 years of experience building high-scale backend systems across Fintech, Quick Commerce, and B2B SaaS. Specializes in distributed systems, GenAI workflows, Python/Django, Golang, and Apache Kafka.
+
+## Skills
+Python, Django, Golang, Java, AWS, PostgreSQL, Kafka, API Gateway, Node.js, Unix, Backend APIs, Distributed Systems, GenAI Workflows, Git, Redis, Microservices, System Design
+
+## Experience
+- Senior Software Engineer at HeyMarvin AI (Nov 2024 - Jan 2026): Data archival, Survey PII processing, feature-flag systems, enterprise SaaS
+- Software Engineer II at Swiggy (May 2022 - Oct 2024): Capacity management, Real-time Demand Shaping, delivery tracking, high-availability services
+- Associate (SE 2) & Analyst (SE 1) at Goldman Sachs (Jun 2019 - May 2022): Trade Allocation, Kong API Gateway, Kafka, FIX Protocol
+- Intern at Goldman Sachs (Jun 2018 - Apr 2019): Trade Position calculator, Automated Regression Tester
+
+## Education
+B.Tech Information Technology, Nirma University (GPA 8.18/10)
+
+## Contact
+- Email: lovlinthakkar99@gmail.com
+- LinkedIn: https://in.linkedin.com/in/lovlin-thakkar
+- GitHub: https://github.com/lovlin-thakkar
+- Portfolio: https://lovlin-thakkar.github.io/index_v2.html

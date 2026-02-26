@@ -1,0 +1,17 @@
+User-agent: *
+Allow: /
+
+# LLM crawlers
+User-agent: GPTBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+Sitemap: https://lovlin-thakkar.github.io/sitemap.xml
