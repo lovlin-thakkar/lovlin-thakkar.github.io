@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -148,6 +148,9 @@
     ]
   }
   </script>
+  <!-- Apply saved theme before first paint to avoid flash -->
+  <script>(function(){var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t);}());</script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -157,6 +160,7 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
+      color-scheme: dark;
       --bg-primary:    #0a0a0f;
       --bg-surface:    #111827;
       --bg-card:       #1a2035;
@@ -855,6 +859,84 @@
       .footer-inner { justify-content: center; text-align: center; }
       .footer-right { justify-content: center; }
     }
+
+    /* ===== LIGHT THEME ===== */
+    [data-theme="light"] {
+      color-scheme: light;
+      --bg-primary:     #f8fafc;
+      --bg-surface:     #f1f5f9;
+      --bg-card:        #ffffff;
+      --accent:         #4f46e5;
+      --accent-light:   #6366f1;
+      --success:        #059669;
+      --text-primary:   #0f172a;
+      --text-secondary: #64748b;
+      --border:         rgba(0,0,0,0.09);
+      --border-accent:  rgba(79,70,229,0.18);
+    }
+    [data-theme="light"] #nav.scrolled {
+      background: rgba(248,250,252,0.92);
+    }
+    [data-theme="light"] .contact-link-icon img[alt="GitHub"] {
+      filter: none;
+    }
+
+    /* ===== THEME TOGGLE ===== */
+    #theme-toggle {
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 0;
+      color: var(--text-secondary);
+      font-size: 0.8rem;
+      font-weight: 500;
+      font-family: inherit;
+      flex-shrink: 0;
+      transition: color 0.2s;
+    }
+    #theme-toggle:hover { color: var(--text-primary); }
+    .toggle-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+    }
+    .toggle-track {
+      width: 34px;
+      height: 18px;
+      border-radius: 9px;
+      background: var(--accent);
+      position: relative;
+      flex-shrink: 0;
+      transition: background 0.25s;
+    }
+    .toggle-thumb {
+      position: absolute;
+      top: 3px;
+      left: 3px;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: #fff;
+      transition: transform 0.25s;
+    }
+    /* dark = ON  → thumb right */
+    [data-theme="dark"]  .toggle-track { background: var(--accent); }
+    [data-theme="dark"]  .toggle-thumb { transform: translateX(16px); }
+    /* light = OFF → thumb left, muted track */
+    [data-theme="light"] .toggle-track { background: var(--text-secondary); opacity: 0.4; }
+    [data-theme="light"] .toggle-thumb { transform: translateX(0); }
+
+    .icon-sun          { display: none; }
+    .icon-moon         { display: block; }
+    .theme-label-light { display: none; }
+    .theme-label-dark  { display: inline; }
+    [data-theme="light"] .icon-sun          { display: block; }
+    [data-theme="light"] .icon-moon         { display: none; }
+    [data-theme="light"] .theme-label-light { display: inline; }
+    [data-theme="light"] .theme-label-dark  { display: none; }
   </style>
 </head>
 <body>
@@ -869,6 +951,15 @@
         <div class="nav-links">
           <a href="#experience" class="nav-link">Experience</a>
           <a href="#projects" class="nav-link">Projects</a>
+          <button id="theme-toggle" role="switch" aria-checked="true" aria-label="Toggle dark mode">
+            <span class="toggle-label">
+              <svg class="icon-moon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+              <svg class="icon-sun" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+              <span class="theme-label-dark">Dark mode</span>
+              <span class="theme-label-light">Light mode</span>
+            </span>
+            <span class="toggle-track"><span class="toggle-thumb"></span></span>
+          </button>
           <a href="mailto:lovlinthakkar99@gmail.com" class="nav-contact"><span class="nav-dot"></span>Get in touch</a>
         </div>
       </div>
@@ -1177,6 +1268,17 @@
     }, { threshold: 0.1 });
 
     document.querySelectorAll('.fade-in, .fade-in-stagger').forEach(el => observer.observe(el));
+
+    // Theme toggle
+    const themeToggle = document.getElementById('theme-toggle');
+    const themeMeta = document.querySelector('meta[name="theme-color"]');
+    themeToggle.addEventListener('click', () => {
+      const next = document.documentElement.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+      document.documentElement.setAttribute('data-theme', next);
+      themeToggle.setAttribute('aria-checked', next === 'dark' ? 'true' : 'false');
+      localStorage.setItem('theme', next);
+      if (themeMeta) themeMeta.setAttribute('content', next === 'light' ? '#f8fafc' : '#0a0a0f');
+    });
 
     // Immediately reveal above-fold elements
     requestAnimationFrame(() => {
