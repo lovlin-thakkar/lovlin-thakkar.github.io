@@ -386,25 +386,49 @@
       color: var(--text-primary);
       transform: translateY(-1px);
     }
-    .hero-focus {
+    .hero-domains {
       display: flex;
-      align-items: center;
-      gap: 9px;
-      font-size: 0.82rem;
-      font-weight: 500;
-      color: var(--success);
+      flex-wrap: wrap;
+      gap: 8px;
       margin-bottom: 28px;
-      opacity: 0.9;
     }
-    .focus-dot {
+    .domain-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      padding: 5px 12px;
+      border-radius: 20px;
+      border: 1px solid;
+    }
+    .domain-pill::before {
+      content: '';
       display: inline-block;
-      width: 7px;
-      height: 7px;
+      width: 5px;
+      height: 5px;
       border-radius: 50%;
-      background: var(--success);
-      animation: pulse-dot 2.2s ease-in-out infinite;
       flex-shrink: 0;
     }
+    .domain-pill--fintech {
+      color: #60a5fa;
+      background: rgba(96, 165, 250, 0.08);
+      border-color: rgba(96, 165, 250, 0.25);
+    }
+    .domain-pill--fintech::before { background: #60a5fa; }
+    .domain-pill--consumer {
+      color: #a78bfa;
+      background: rgba(167, 139, 250, 0.08);
+      border-color: rgba(167, 139, 250, 0.25);
+    }
+    .domain-pill--consumer::before { background: #a78bfa; }
+    .domain-pill--saas {
+      color: #34d399;
+      background: rgba(52, 211, 153, 0.08);
+      border-color: rgba(52, 211, 153, 0.25);
+    }
+    .domain-pill--saas::before { background: #34d399; }
 
     .hero-ctas {
       display: flex;
@@ -1086,10 +1110,11 @@
             <span class="hero-tag">Distributed Systems</span>
           </div>
 
-          <p class="hero-focus fade-in">
-            <span class="focus-dot"></span>
-            Fintech &nbsp;·&nbsp; Infrastructure &nbsp;·&nbsp; B2B SaaS
-          </p>
+          <div class="hero-domains fade-in">
+            <span class="domain-pill domain-pill--consumer">Consumer Apps</span>
+            <span class="domain-pill domain-pill--saas">B2B SaaS</span>
+            <span class="domain-pill domain-pill--fintech">FinTech</span>
+          </div>
 
           <div class="hero-ctas fade-in">
             <a href="mailto:lovlinthakkar99@gmail.com" class="btn-primary">Get in touch</a>
